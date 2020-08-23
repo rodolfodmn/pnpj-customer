@@ -24,13 +24,12 @@ class InstallData implements InstallDataInterface
 			'tipo_pessoa',
 			[
 				'label' => 'Tipo Pessoa',
-				'type' => 'integer',
+				'type' => 'int',
 				'input' => 'multiselect',
 				'required' => false,
 				'visible' => true,
 				'user_defined' => true,
-				'sort_order' => 1000,
-				'position' => 1000,
+				'position' => 90,
 				'system' => 0,
 				'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
 				'source' => 'Pnpj\Customer\Model\Entity\Attribute\Source\Pnpj'
@@ -40,8 +39,7 @@ class InstallData implements InstallDataInterface
 		$tipoPessoa = $this->eavConfig->getAttribute(Customer::ENTITY, 'tipo_pessoa');
 		$tipoPessoa->setData(
 			'used_in_forms',
-			['adminhtml_customer']
-
+			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 		$tipoPessoa->save();
 
@@ -55,7 +53,7 @@ class InstallData implements InstallDataInterface
 				'required'     => false,
 				'visible'      => true,
 				'user_defined' => true,
-				'position'     => 999,
+				'position'     => 90,
 				'system'       => 0,
 			]
 		);
@@ -63,8 +61,7 @@ class InstallData implements InstallDataInterface
 		$inscricaoEstadual = $this->eavConfig->getAttribute(Customer::ENTITY, 'inscricao_estadual');
 		$inscricaoEstadual->setData(
 			'used_in_forms',
-			['adminhtml_customer']
-
+			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 		$inscricaoEstadual->save();
 
@@ -72,14 +69,13 @@ class InstallData implements InstallDataInterface
 			\Magento\Customer\Model\Customer::ENTITY,
 			'tipo_compra',
 			[
-				'type' => 'integer',
+				'type' => 'int',
 				'label' => 'Tipo Compra',
 				'input' => 'multiselect',
 				'required' => false,
 				'visible' => true,
 				'user_defined' => true,
-				'sort_order' => 1000,
-				'position' => 1000,
+				'position' => 90,
 				'system' => 0,
 				'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
 				'source' => 'Pnpj\Customer\Model\Entity\Attribute\Source\SellTypes'
@@ -89,8 +85,7 @@ class InstallData implements InstallDataInterface
 		$tipoCompra = $this->eavConfig->getAttribute(Customer::ENTITY, 'tipo_compra');
 		$tipoCompra->setData(
 			'used_in_forms',
-			['adminhtml_customer']
-
+			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 		$tipoCompra->save();
 	}
