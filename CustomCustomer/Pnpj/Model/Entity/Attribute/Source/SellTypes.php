@@ -1,6 +1,6 @@
 <?php
 
-namespace Pnpj\Customer\Model\Entity\Attribute\Source;
+namespace CustomCustomer\Pnpj\Model\Entity\Attribute\Source;
 
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 

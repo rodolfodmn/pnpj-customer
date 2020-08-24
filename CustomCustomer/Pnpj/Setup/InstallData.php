@@ -1,5 +1,5 @@
 <?php
-namespace Pnpj\Customer;
+namespace CustomCustomer\Pnpj;
 
 use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
