@@ -62,7 +62,7 @@ class InstallData implements InstallDataInterface
 			'is_html_allowed_on_front' => false,
 			'visible_on_front' => true,
 			'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
-			'source' => 'Pnpj\Customer\Model\Entity\Attribute\Source\Pnpj'
+			'source' => 'CustomCustomer\Pnpj\Model\Entity\Attribute\Source\Pnpj'
 		]);
 
 		$attribute = $customerSetup->getEavConfig()
@@ -70,7 +70,7 @@ class InstallData implements InstallDataInterface
 							 ->addData([
 								 'attribute_set_id' => $attributeSetId,
 								 'attribute_group_id' => $attributeGroupId,
-								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit'],
+								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit', 'customer_account_create'],
 							 ]);
 
 		$attribute->save();
@@ -99,7 +99,7 @@ class InstallData implements InstallDataInterface
 							 ->addData([
 								 'attribute_set_id' => $attributeSetId,
 								 'attribute_group_id' => $attributeGroupId,
-								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit'],
+								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit', 'customer_account_create'],
 							 ]);
 
 		$attribute->save();
@@ -123,7 +123,7 @@ class InstallData implements InstallDataInterface
 			'is_html_allowed_on_front' => false,
 			'visible_on_front' => true,
 			'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
-			'source' => 'Pnpj\Customer\Model\Entity\Attribute\Source\SellTypes'
+			'source' => 'CustomCustomer\Pnpj\Model\Entity\Attribute\Source\SellTypes'
 		]);
 
 		$attribute = $customerSetup->getEavConfig()
@@ -131,7 +131,7 @@ class InstallData implements InstallDataInterface
 							 ->addData([
 								 'attribute_set_id' => $attributeSetId,
 								 'attribute_group_id' => $attributeGroupId,
-								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit'],
+								 'used_in_forms' => ['adminhtml_customer', 'customer_account_edit', 'customer_account_create'],
 							 ]);
 
 		$attribute->save();
