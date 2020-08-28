@@ -14,15 +14,15 @@
 		</select>
 	</div>
 </div>
-<div class="field ie required">
-	<label class="label" for="ie">
+<div class="field inscricao_estadual required">
+	<label class="label" for="inscricao_estadual">
 	  <span><?= $block->escapeHtml(__('Inscrição Estadual')) ?></span>
 	</label>
 	<div class="control">
 	   <input 
 		type="text" 
-		name="ie" 
-		id="ie" 
+		name="inscricao_estadual" 
+		id="inscricao_estadual" 
 		value="" 
 		title="<?= $block->escapeHtmlAttr(__('Inscrição Estadual')) ?>" 
 		class="input-text" 
@@ -30,7 +30,7 @@
 	</div>
 </div>
 <div class="field tipo_compra required">
-	<label class="label" for="ie">
+	<label class="label" for="tipo_compra">
 	  <span><?= $block->escapeHtml(__('Tipo Compra')) ?></span>
 	</label>
 	<div class="control">
@@ -46,17 +46,18 @@
 	</div>
 </div>
 <script>
-document.querySelector('.ie').hidden = true
+document.querySelector('.inscricao_estadual').hidden = true
 document.querySelector('.tipo_compra').hidden = true
 
 document.querySelector('#tipo_pessoa').addEventListener('change', function (e){
 	if(e.target.value == 1){
-		document.querySelector('.ie').hidden = true
+		document.querySelector('.inscricao_estadual').hidden = true
 		document.querySelector('.tipo_compra').hidden = true
 	}
 	if(e.target.value == 2){
-		document.querySelector('.ie').hidden = false
+		document.querySelector('.inscricao_estadual').hidden = false
 		document.querySelector('.tipo_compra').hidden = false
 	}
+
 });
 </script>
