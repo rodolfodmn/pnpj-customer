@@ -1,0 +1,62 @@
+<div class="field tipo_pessoa required">
+	<label class="label" for="tipo_pessoa">
+	  <span><?= $block->escapeHtml(__('Tipo Pessoa')) ?></span>
+	</label>
+	<div class="control">
+		<select
+			name="tipo_pessoa" 
+			id="tipo_pessoa" 
+			title="<?= $block->escapeHtmlAttr(__('Tipo Pessoa')) ?>" 
+			class="input-text" 
+			data-validate="{required:true}">
+		  <option value="1">Pessoa física</option>
+		  <option value="2">Pessoa jurídica</option> 
+		</select>
+	</div>
+</div>
+<div class="field ie required">
+	<label class="label" for="ie">
+	  <span><?= $block->escapeHtml(__('Inscrição Estadual')) ?></span>
+	</label>
+	<div class="control">
+	   <input 
+		type="text" 
+		name="ie" 
+		id="ie" 
+		value="" 
+		title="<?= $block->escapeHtmlAttr(__('Inscrição Estadual')) ?>" 
+		class="input-text" 
+		data-validate="{required:true}">
+	</div>
+</div>
+<div class="field tipo_compra required">
+	<label class="label" for="ie">
+	  <span><?= $block->escapeHtml(__('Tipo Compra')) ?></span>
+	</label>
+	<div class="control">
+		<select
+			name="tipo_compra" 
+			id="tipo_compra" 
+			title="<?= $block->escapeHtmlAttr(__('Tipo Compra')) ?>" 
+			class="input-text" 
+			data-validate="{required:true}">
+		  <option value="1">Uso próprio</option> 
+		  <option value="2">Revenda</option>
+		</select>
+	</div>
+</div>
+<script>
+document.querySelector('.ie').hidden = true
+document.querySelector('.tipo_compra').hidden = true
+
+document.querySelector('#tipo_pessoa').addEventListener('change', function (e){
+	if(e.target.value == 1){
+		document.querySelector('.ie').hidden = true
+		document.querySelector('.tipo_compra').hidden = true
+	}
+	if(e.target.value == 2){
+		document.querySelector('.ie').hidden = false
+		document.querySelector('.tipo_compra').hidden = false
+	}
+});
+</script>

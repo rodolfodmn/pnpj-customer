@@ -85,8 +85,8 @@ class InstallData implements InstallDataInterface
 			'required' => false,
 			'visible' => true,
 			'user_defined' => true,
-			'sort_order' => 78,
-			'position' => 78,
+			'sort_order' => 79,
+			'position' => 79,
 			'system' => 0,
 			'is_used_in_grid' => true,
 			'is_visible_in_grid' => true,
@@ -109,9 +109,9 @@ class InstallData implements InstallDataInterface
 		$attributeGroupId = $attributeSet->getDefaultGroupId($attributeSetId);
 
 		$customerSetup->addAttribute(Customer::ENTITY, 'tipo_compra', [
-			'type' => 'text',
 			'label' => 'Tipo Compra',
-			'input' => 'text',
+			'type' => 'int',
+			'input' => 'multiselect',
 			'required' => false,
 			'visible' => true,
 			'user_defined' => true,
